@@ -1,0 +1,23 @@
+services:
+  dataBase:
+    image: postgres:latest
+    container_name: db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./scripts/intitDB.sql:/docker-entrypoint-initdb.d/init.sql
+  dataBase2:
+    image: postgres:latest
+    container_name: db2
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./scripts/intitDB.sql:/docker-entrypoint-initdb.d/init.sql
