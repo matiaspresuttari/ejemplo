@@ -1,7 +1,7 @@
 services:
-  dataBase:
+  dataBase1:
     image: postgres:latest
-    container_name: db
+    container_name: db1
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin
